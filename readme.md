@@ -1,8 +1,10 @@
 ### Setup
 
 To start
-`yarn`
-`yarn start`
+```
+yarn
+yarn start
+```
 
 ### Assumptions
 
