@@ -1,20 +1,16 @@
-# FikaSearch Exercise
+### Setup
 
-The objective of this exercise is to fork this repository and create a `react-native` app called 'FikaSearch'. This app will comprise of a listing page of films and the names of their genres.
+To start
+`yarn`
+`yarn start`
 
-You have an hour to complete this. We don't expect you to complete the exercise but we do expect you to have an understandable structure, clean code, and to be able to describe your next steps.
+### Assumptions
 
-## Technical details
+- I am assuming the app should not show any of the contents if either of the api call fails
+- Hence the architecture is for initiating both api calls at the same time with Promise.all, for a more efficient fetching process
 
-### API
-You will need to use the following URLs to fetch the films and genres from `the movie db` API:
+### Extended goals
 
-movies - [https://api.themoviedb.org/3/movie/now_playing?api_key=d432b933ecc6d5642d8d2befbc40c7ac&language=en-US&page=1](https://developers.themoviedb.org/3/movies/get-now-playing)
-
-genres - [https://api.themoviedb.org/3/genre/movie/list?api_key=d432b933ecc6d5642d8d2befbc40c7ac&language=en-US](https://developers.themoviedb.org/3/genres/get-movie-list)
-
-#### Images
-
-The API will provide part of the image url via the `poster_path` field of each film. It must be combined with the base image path `https://image.tmdb.org/t/p/w500/`
-
-**Have fun!**
+- More proper styling, currently it is not styled at all, no responsive design, minimal accessibility to satisfy the linter
+- better error handling as commented in the code, since there is no requirement for that now
+- cancellation flow for ajax request, currently there is none as it is not required
